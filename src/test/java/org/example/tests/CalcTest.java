@@ -1,5 +1,6 @@
-package org.example;
+package org.example.tests;
 
+import org.example.Calc;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -44,8 +45,8 @@ class CalcTest {
     @Timeout(10)
     @Tag("summ")
     void summ2() {
-        Calc calc = new Calc();
-        int result = calc.summ(2, 6);
+        Calc lolllll = new Calc();
+        int result = lolllll.summ(2, 6);
         Assertions.assertEquals(8, result, "Не тот ответ");
 
 
@@ -58,7 +59,9 @@ class CalcTest {
     void summ3(int a, int b, int expectedResult) {
         Calc calc = new Calc();
         int result = calc.summ(a, b);
-        Assertions.assertEquals(expectedResult, result, "Не тот ответ");
+       assertEquals(expectedResult, result, "Не тот ответ");
+       // Assertions.assertEquals(expectedResult, result, "Не тот ответ");
+
 
     }
 
